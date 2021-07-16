@@ -367,7 +367,13 @@ Footer p{
     .hero-content p{
         width: 100%;
     }
-   
+    .hero-content div{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-content div .start-project{
+        margin: 0 0 20px 0;
+    }
     .banner{
         padding: 50px 25px;
        
@@ -399,13 +405,24 @@ Footer p{
         gap: 60px;
         padding: 60px 0px;
     }
-
+    .services-card{
+        margin-bottom: 20px;
+    }
+    .service-card:last-child{
+        margin-bottom: 0;
+    }
     .footer-top{
         padding: 80px 50px;
         display: flex;
         flex-direction: column;
         row-gap: 40px;
         background-color: var(--lightgrey);
+    }
+    .footer-heading:first-child{
+        margin-top:0;
+    }
+    .footer-heading{
+        margin-top: 20px;
     }
 }
 
