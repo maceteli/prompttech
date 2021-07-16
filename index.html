@@ -10,25 +10,22 @@
 
     <!--Custom Stylesheet-->
     <link rel="stylesheet" href="css/style.css">
-    <!--Font Awesome-->
-    <link href="css/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header id="header">
             <div>
             <a href="#" class="logo"><img src="images/favicon.png">romptcomputer</a>
-            <button class="btn-menu">
-                MENU
+            <button id="menu-btn" onclick="toggle_visibility('menu-list');" class="btn-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #20252e;transform: ;msFilter:;"><path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"></path></svg>
             </button>
             </div>
-            <ul class="menu-list">
-                <li><a href="#">Home</a></li>
+            <ul id="menu-list">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>
-            
+            </ul> 
         </header>
         <section class="hero">
             <div class="banner">
@@ -43,10 +40,10 @@
                     Build responsive beautiful website today!
                 </h2>
                 <p>
-                    Aivo – is a complete HTML5 and CSS3 website template. It fits perfectly for freelancers, artists and design agencies. It looks great with all types of devices.
+                    luptatum zril delenit augue duis dolore te feugait nul la facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer
                 </p>
                 <div>
-                <a href="#" class="start-project btn-primary">Start A project</a> <a href="#" class="btn-secondary">Learn More</a>
+                <a href="#" class="start-project btn-primary">Contact Us</a> <a href="#" class="btn-secondary">Learn More</a>
                 </div>
             </div>
         </section>
@@ -83,7 +80,7 @@
                     <div class="services-card">
                         <div class="services-icon">
                             <!--icon goes here-->
-                            <i class="fas fa-desktop"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #20252e;transform: ;msFilter:;"><path d="M20,3H4C2.897,3,2,3.897,2,5v11c0,1.103,0.897,2,2,2h7v2H8v2h3h2h3v-2h-3v-2h7c1.103,0,2-0.897,2-2V5 C22,3.897,21.103,3,20,3z M4,14V5h16l0.002,9H4z"></path></svg>
                         </div>
                         <div class="services-description">
                             <h2 class="services-title">Web Design</h2>
@@ -96,10 +93,10 @@
                     <div class="services-card">
                         <div class="services-icon">
                             <!--icon goes here-->
-                            <i class="fas fa-cog"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #20252e;transform: ;msFilter:;"><path d="M7.375 16.781l1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4C2.138 11.409 2 11.696 2 12s.138.591.375.781L7.375 16.781zM16.625 7.219l-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4C21.862 12.591 22 12.304 22 12s-.138-.591-.375-.781L16.625 7.219z"></path><path transform="rotate(102.527 12 12)" d="M2.78 11H21.219V13.001H2.78z"></path></svg>
                         </div>
                         <div class="services-description">
-                            <h2 class="services-title">Web Development</h2>
+                            <h2 class="services-title">Application Development</h2>
                             <p class="services-excerpt">
                                 Aenean ac consectetur quam. Donec malesuada lacus nec ullamcorper pellentesque ...
                             </p>
@@ -109,7 +106,7 @@
                     <div class="services-card">
                         <div class="services-icon">
                             <!--icon goes here-->
-                            X
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #20252e;transform: ;msFilter:;"><path d="M7.375 16.781l1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4C2.138 11.409 2 11.696 2 12s.138.591.375.781L7.375 16.781zM16.625 7.219l-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4C21.862 12.591 22 12.304 22 12s-.138-.591-.375-.781L16.625 7.219z"></path><path transform="rotate(102.527 12 12)" d="M2.78 11H21.219V13.001H2.78z"></path></svg>
                         </div>
                         <div class="services-description">
                             <h2 class="services-title">Content Writing</h2>
@@ -122,10 +119,10 @@
                     <div class="services-card">
                         <div class="services-icon">
                             <!--icon goes here-->
-                            X
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #20252e;transform: ;msFilter:;"><path d="M13.4,2.096c-3.358-0.458-6.729,0.804-8.937,3.331C2.565,7.603,1.702,10.509,2.096,13.4 c0.53,3.894,3.458,7.207,7.285,8.246C10.245,21.881,11.126,22,11.999,22l0.142-0.001c1.032-0.016,1.973-0.549,2.516-1.426 c0.541-0.876,0.599-1.953,0.153-2.879l-0.199-0.416c-0.418-0.868-0.121-1.57,0.094-1.912c0.539-0.858,1.627-1.21,2.576-0.755 l0.412,0.197c0.412,0.198,0.85,0.299,1.301,0.299c1.633,0,2.981-1.331,3.006-2.967c0.014-0.92-0.105-1.849-0.353-2.76 C20.607,5.554,17.294,2.626,13.4,2.096z M18.558,13.005l-0.412-0.197c-1.828-0.878-4.07-0.198-5.135,1.494 c-0.738,1.176-0.813,2.576-0.204,3.842l0.199,0.416c0.151,0.314,0.133,0.664-0.051,0.961c-0.185,0.299-0.492,0.474-0.844,0.479 L11.999,20c-0.696,0-1.401-0.096-2.095-0.283c-3.063-0.831-5.403-3.479-5.826-6.586C3.757,10.776,4.43,8.508,5.971,6.742 C7.491,5,9.689,4,12,4c0.374,0,0.754,0.026,1.131,0.078c3.107,0.423,5.755,2.764,6.586,5.826c0.198,0.73,0.293,1.474,0.282,2.207 C19.987,12.918,19.154,13.294,18.558,13.005z"></path><circle cx="7.5" cy="14.5" r="1.5"></circle><circle cx="7.5" cy="10.5" r="1.5"></circle><circle cx="10.5" cy="7.5" r="1.5"></circle><circle cx="14.5" cy="7.5" r="1.5"></circle></svg>
                         </div>
                         <div class="services-description">
-                            <h2 class="services-title">Illustrations</h2>
+                            <h2 class="services-title">Illustrations & UI/UX</h2>
                             <p class="services-excerpt">
                                 Aenean ac consectetur quam. Donec malesuada lacus nec ullamcorper pellentesque ...
                             </p>
@@ -135,10 +132,10 @@
                     <div class="services-card">
                         <div class="services-icon">
                             <!--icon goes here-->
-                            X
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #20252e;transform: ;msFilter:;"><path d="M20,6h-3V4c0-1.103-0.897-2-2-2H9C7.897,2,7,2.897,7,4v2H4C2.897,6,2,6.897,2,8v11c0,1.103,0.897,2,2,2h16 c1.103,0,2-0.897,2-2V8C22,6.897,21.103,6,20,6z M16,8v11H8V8H16z M15,4v2H9V4H15z M4,8h2v11H4V8z M18,19V8h2l0.001,11H18z"></path></svg>
                         </div>
                         <div class="services-description">
-                            <h2 class="services-title">Marketing</h2>
+                            <h2 class="services-title">Marketing & Branding</h2>
                             <p class="services-excerpt">
                                 Aenean ac consectetur quam. Donec malesuada lacus nec ullamcorper pellentesque ...
                             </p>
@@ -148,10 +145,10 @@
                     <div class="services-card">
                         <div class="services-icon">
                             <!--icon goes here-->
-                            X
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #20252e;transform: ;msFilter:;"><circle cx="9.5" cy="9.5" r="1.5"></circle><circle cx="14.5" cy="9.5" r="1.5"></circle><path d="M12,2C6.486,2,2,5.589,2,10c0,2.908,1.897,5.515,5,6.934V22l5.34-4.004C17.697,17.852,22,14.32,22,10 C22,5.589,17.514,2,12,2z M12,16h-0.333L9,18v-2.417l-0.641-0.247C5.671,14.301,4,12.256,4,10c0-3.309,3.589-6,8-6s8,2.691,8,6 S16.411,16,12,16z"></path></svg>
                         </div>
                         <div class="services-description">
-                            <h2 class="services-title">Analytics</h2>
+                            <h2 class="services-title">consultation</h2>
                             <p class="services-excerpt">
                                 Aenean ac consectetur quam. Donec malesuada lacus nec ullamcorper pellentesque ...
                             </p>
@@ -216,7 +213,9 @@
         </main>
    
     </div>
-    <!--Custom Stylesheet-->
+    <!--Boxicon-->
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <!--Custom Script-->
     <script src="js/animations.js"></script>
 </body>
 </html>

@@ -68,8 +68,15 @@
  }
  ul li a {
     color: var(--white);
-    transition: 0.6s;
+    transition:ease-in 0.3s;
  }
+ ul li a:hover{
+     border-bottom: 4px solid var(--blue);
+ }
+ ul li a:active{
+    font-weight: bold;
+    border-bottom: 4px solid var(--blue);
+}
  .container{
     display: flex;
     flex-direction: column;
@@ -81,29 +88,45 @@
      color: var(--white);
      padding: 12px 30px;
      border: 2px solid var(--blue);
+     border-radius: 10px;
  }
 
  .btn-secondary{
      border: 2px solid #fff;
      padding: 12px 30px;
      color: var(--white);
-     
+     transition: 0.6s;
+     border-radius: 10px;
+ }
+ .btn-secondary:hover{
+     background-color: var(--white);
+     color: var(--blue)
  }
  .btn-menu{
     border: 2px solid var(--white);
-    padding: 12px 30px;
+    padding: 12px;
     color: var(--white);
     background-color: transparent;
     display:none;
+    border-radius: 50%;
+}
+.btn-menu:hover, .btn-menu:active{
+    background-color: var(--white);
+    color: var(--darkgrey);
 }
 .sticky .btn-menu{
     border: 2px solid var(--darkgrey);
-    padding: 12px 30px;
+    padding: 12px;
     color: var(--darkgrey);
     background-color: transparent;
 }
+.sticky .btn-menu:hover, .sticky .btn-menu:active{
+    background-color: var(--darkgrey);
+    color: var(--white);
+}
  /** Header **/
  /* Navigation */
+ 
  .logo{
     font-size: var(--p);
     color: var(--white);
@@ -116,6 +139,7 @@
  .sticky{
     padding: 25px 50px;
     background-color: var(--white);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .sticky ul li a{
     color: var(--darkgrey);
@@ -175,6 +199,7 @@
  }
  .about-left img{
      width: 100%;
+     border-radius: 10px;
  }
  .about-right{
      justify-content: right;
@@ -216,6 +241,14 @@
 .services-card{
     display: flex;
     flex-direction: row;
+}
+.services-icon{
+    padding-right: 20px;
+}
+.services-icon svg{
+    width: 35px;
+    height: 35px;
+    color: var(--darkgrey);
 }
 .services-title{
     color: var(--darkgrey);
@@ -308,8 +341,7 @@ Footer p{
     header{
         display: flex;
         flex-direction: column;
-        padding: 20px 25px;
-        
+        padding: 20px 25px;        
     }
     header div{
         display: flex;
@@ -320,22 +352,28 @@ Footer p{
     header ul{
         display: flex;
         flex-direction: column;
+        text-align: center;
         background-color: var(--white);
         align-items: center;
         width: 100%;
         padding: 20px;
         margin-top: 20px;
+        transition: ease-out 1s;
+        border-radius: 10px;
      }
-     .menu-list{
-         display: none;
+     #menu-list{
+        display: none;
      }
+    
      header ul li{
          margin-right: 0px;
          padding: 20px 0;
+         width: 100%;
      }
      header ul li a {
         color: var(--darkgrey);
      }
+    
     .btn-menu{
         display: flex;
     }
@@ -344,6 +382,7 @@ Footer p{
     }
     .banner{
         background: url('../images/hero-mobile.jpg');
+        background-attachment: fixed;
      }
     .hero{
         height: fit-content;
