@@ -192,7 +192,7 @@
     
  }
  .hero-content{
-     padding: 0 100px;
+     padding: 0 50px;
      color: var(--white);
      position: absolute;
  }
@@ -201,6 +201,7 @@
     margin-bottom: 2.8px;
 }
 .hero-content h2{
+    color: var(--white) !important;
     margin-bottom: 21.75px;
 }
 .hero-content p{
@@ -313,7 +314,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    padding: 0px 100px;
+    padding: 0px 50px;
     height: 100vh;
     align-items: center;
 }
@@ -532,18 +533,24 @@ Footer p{
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 0 50px;
+        padding: 0 25px;
         color: var(--white);
         position: absolute;
+        width: 100%;
     }
     .hero-content h1{
         width: 100%;
+
     }
     .hero-content h2{
         width: 100%;
+        color: var(--white) !important;
+        
     }
     .hero-content p{
+        line-height: 1.5;
         width: 100%;
+        display: none;
     }
     .hero-content div{
         display: flex;
@@ -557,16 +564,20 @@ Footer p{
        
     }
 
-  
+    .about{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 25px 0 25px ;
+    }
     .about-left img{
+    
        height: 250px;
     }
     .services{
         display: flex;
         flex-direction: column;
         height: fit-content;
-        
-        padding: 50px 0px;
+        padding: 50px 25px;
         background-color: var(--lightergrey);
     }
 
@@ -586,7 +597,7 @@ Footer p{
         display: flex;
         flex-direction: column;
         gap: 30px;
-        padding: 20px 25px;
+        padding: 50px 25px;
         height: fit-content;
         align-items: center;
     }
@@ -627,7 +638,7 @@ Footer p{
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    padding: 20px 100px;
+    padding: 20px 50px;
  }
  .landing-hero .landing-banner{
     
@@ -638,7 +649,7 @@ Footer p{
       flex-direction: column;
       justify-content: flex-end;
       width: 100%;
-      padding: 0 100px;
+      padding: 0 50px;
       color: var(--darkgrey);
       height: 100%;
       margin-top:-25px;
