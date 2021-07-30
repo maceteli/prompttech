@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/favicon.png" rel="icon">
+    
+    <title>Promptcomputer</title>
+
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <style>
+        #ticket-menu ul{
+            display: flex;
+            flex-direction: row;
+        }
+        #ticket-menu ul li{
+            display: flex;
+            flex-direction: row;
+        }
+        .ticket{
+                display: flex;
+                flex-direction: column;
+                height: fit-content;
+                padding: 0px 200px;
+                background-color: var(--lightergrey);
+            }
+        .ticket div:last-child{
+            justify-content: flex-end;
+        }
+            #services .ticket{
+                background-color: var(--white);
+        }
+    .ticket input[type=text], .ticket input[type=email], .ticket input[type=file],.ticket select, .ticket textarea{
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    color: var(--lightgrey);
+    background-color: var(--white);
+    border:1px solid var(--lightgrey);
+    border-radius: 15px;
+}
+.ticket-menu{
+	display: flex;
+    flex-direction: row;
+
+  width: 100%;
+  overflow: scroll;
+
+  padding: 50px;
+}
+.ticket-menu::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+.ticket-options{
+display:flex;
+place-items: center;
+padding: 15px 30px;
+
+font-size: var(--p);
+margin-right: 20px;
+border-radius: 20px;
+background-color: var(--lightergrey);
+}
+.active, .ticket .dot:hover {
+    background-color: var(--darkgrey);
+    color: var(--white);
+}
+/* The dots/bullets/indicators */
+.ticket .dot {
+    cursor: pointer;
+    height: 15px;
+    width: auto;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    
+    transition: background-color 0.6s ease;
+  }
+  
+
+
+input:focus{
+    outline: none !important;
+}
+input[type=submit]{
+    font-size: var(--p);
+}
+.form-container{
+    color: var(--darkgrey);
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    
+}
+.form-field{
+    margin-bottom: 25px;
+}
+.mySlides span{
+    color: red;
+}
+.field-name{
+    margin-bottom: 15px;
+}
+label{
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: var(--p);
+}
+.chat-section{
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: fit-content;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    background-color: var(--darkgrey);
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.message .message-author{
+    align-self: flex-start;
+}
+.message .message-content{
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.message .message-time{
+    color: var(--lightergrey);
+}
+.message, .response{
+    max-width: 60%;
+}
+.response{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: fit-content;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    background-color: var(--lightergrey);
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.response .message-author{
+    align-self: flex-start;
+}
+.response .message-content{
+    color: var(--darkgrey);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.response .message-time{
+    align-self: flex-end;
+    color: var(--lightgrey);
+}
+.message, .response{
+    max-width: 60%;
+}
+ table td{
+    padding: 10px 0;
+  
+}
+table td a{
+    margin-right: 10px ;
+}
+.table-highlight{
+    font-weight: bold;
+}
+        @media only screen and (max-width: 980px){
+            header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding:0;
+            }
+            header div{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            header ul{
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                background-color: var(--white);
+                align-items: center;
+                width: 100%;    
+                transition: ease-out 1s;
+                border-radius: 10px;
+                padding:0;
+                margin:0;
+            }
+            .ticket{
+                display: flex;
+                flex-direction: column;
+                height: fit-content;
+                padding: 20px 25px;
+                background-color: var(--lightergrey);
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="landing container">
+        <div>
+            
+        <header class="landing sticky">
+            <div>
+                <a href="#" class="logo"><img src="images/favicon.png"><span id="complete-name">romptcomputer</span></a>
+            </div>
+            <div id="ticket-menu">
+               
+            </div> 
+        </header>
+    
+    </div>
+        <main id="services">
+            <button onclick="topFunction()" id="myBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="fill: transform: ;msFilter:;"><path d="M12 6.879L4.939 13.939 7.061 16.061 12 11.121 16.939 16.061 19.061 13.939z"></path></svg>
+            </button>
+           <!--Services-->
+           <section class="ticket">
+                <div class="form-container">
+                    <!-- The dots/circles -->
+                    <div style="text-align:cener; " class="ticket-menu">
+                        <div class="ticket-options" onclick="currentSlide(1)">Chat</div>
+                        <div class="ticket-options" onclick="currentSlide(2)">Details</div>
+                        <div class="ticket-options" onclick="currentSlide(3)">Invoice(s)</div>
+                        <div class="ticket-options" onclick="currentSlide(4)">Questionnaires</div>
+                        <div class="ticket-options" onclick="currentSlide(5)">Attachments</div>
+                    </div>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        
+                            <!-- chat -->
+                            <div class="mySlides fade">
+                                <!--form section-->
+                               <div>
+                                <form  action="https://www.google.com">
+                                <div class="form-field">
+                                    <label>Leave a Message</label>
+                                    <div>
+                                        <textarea id="w3review" name="w3review" rows="5" cols="50">
+
+                                        </textarea>
+                                    </div>
+                                </div>
+                               
+                                <div>
+                                    <div style="margin-top: 30px; display: flex; justify-content: flex-end; align-items: center;">
+                                        
+                                        <input type="submit" class="btn-primary" value="Post">
+                                    </div>
+                                    <div style=" text-align: right;">
+                                        
+                                    </div>
+                                </div>
+                                </form>
+                                </div>
+                                <div class="chat-section">
+                                    <div class="response">
+                                        <div class="message-author"></div>
+                                        <div class="message-content">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content</p>     
+                                        </div>
+                                        <div class="message-time">
+                                            <p>2021-07-18 08:15:32</p>
+                                        </div>
+                                    </div>
+                                    <div class="message">
+                                        <div class="message-author"></div>
+                                        <div class="message-content">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content</p>  
+                                        </div>
+                                        <div class="message-time">
+                                            <p>2021-07-18 08:15:32</p>
+                                        </div>
+                                    </div>
+                                    <div class="message">
+                                        <div class="message-author"></div>
+                                        <div class="message-content">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content</p>  
+                                        </div>
+                                        <div class="message-time">
+                                            <p>2021-07-18 08:15:32</p>
+                                        </div>
+                                    </div>
+                                    <div class="response">
+                                        <div class="message-author"></div>
+                                        <div class="message-content">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content</p>     
+                                        </div>
+                                        <div class="message-time">
+                                            <p>2021-07-18 08:15:32</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Details-->
+                            <div class="mySlides fade">
+                                <div class="form-field">
+                                    <label class="field-nme">Ticket ID</label>
+                                    <div>
+                                        <p class="table-highlight">
+                                             #PC5f40dc81999d2  
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <label>Name </label>
+                                    <div>
+                                        <p class="table-highlight">Golden Mac-Eteli</p>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <label>Customer E-mail</label>
+                                    <div>
+                                        <p class="table-highlight">
+                                            maceteligolden@gmail.com
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <label>Date & Time Created</label>
+                                    <div>
+                                        <p class="table-highlight">
+                                            2020-08-22 08:51:14
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <label>Description</label>
+                                    <div>
+                                        <p class="table-highlight">
+                                            Cracks on the screen 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <label>Category</label>
+                                    <div>
+                                        <p class="table-highlight">
+                                            Web Design
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!--Invoice-->
+                            <div class="mySlides fade" style="overflow-x:scroll; width: 100%">
+                                <table width="100%">
+                                    <tr>
+                                        <td>ID</td>
+                                        <td>Date Recieved</td>
+                                        <td>Due Date</td>
+                                        <td>Status</td>
+                                        <td>Action</td>
+                                    </tr>
+                                   
+                                        <tr>
+                                            <td class="table-highlight">
+                                               <a href="#">INV-0001</a>
+                                            </td>
+                                            <td>
+                                                2020-08-22 08:51:14
+                                            </td>
+                                            <td>
+                                                2020-08-30 08:51:14
+                                            </td>
+                                            <td class="table-highlight">
+                                                Unpaid
+                                            </td>
+                                            <td>
+                                                View
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="table-highlight">
+                                               <a href="#">INV-0001</a>
+                                            </td>
+                                            <td>
+                                                2020-08-22 08:51:14
+                                            </td>
+                                            <td>
+                                                2020-08-30 08:51:14
+                                            </td>
+                                            <td class="table-highlight">
+                                                Unpaid
+                                            </td>
+                                            <td>
+                                                View
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                             <!--Questionnaires-->
+                             <div class="mySlides fade" style="overflow-x:scroll">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Title</td>
+                                            <td>Date Recieved</td>
+                                            <td>Action</td>
+                                        </tr>
+                                       
+                                            <tr>
+                                                <td>
+                                                    Web Design
+                                                </td>
+                                                <td>
+                                                    2020-08-30 08:51:14
+                                                </td>
+                                                <td>
+                                                    <a href="#">Fill</a>
+                                                    <a href="#">View</a>
+                                                </td>
+                                            </tr>
+                                        
+                                    </table>
+                            </div>
+                             <!--Attachments-->
+                             <div class="mySlides fade" style="overflow-x:scroll">
+                                <table width="100%">
+                                    <tr>
+                                        <td>File Name</td>
+                                        <td>Action</td>
+                                    </tr>
+                                   
+                                        <tr>
+                                            <td>
+                                                Web Design
+                                            </td>
+                                            <td>
+                                                <a href="#">Download</a>
+                                                <a href="#">View</a>
+                                            </td>
+                                        </tr>
+                                    
+                                </table>
+                            </div>
+                           
+                       
+
+                    
+                    </div>
+                </div>
+            </section>
+           
+        </main>
+   
+    </div>
+    <!--Boxicon-->
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <!--Custom Script-->
+    <script src="js/animations.js"></script>
+</body>
+</html>
